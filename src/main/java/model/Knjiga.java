@@ -1,6 +1,8 @@
 package model;
 
+import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
 /**
@@ -17,7 +19,8 @@ public class Knjiga {
     private int brojStrana;
     @DatabaseField(columnName = POLJE_DATUM_IZDAVANJA,canBeNull = false)
     private java.util.Date datumIzdanja;
-    private boolean prisutna; //ne treba anotacija
+    //ne treba anotacija
+    private boolean prisutna;
 
     //Staticki atributi
     //ne treba anotacija
@@ -25,9 +28,9 @@ public class Knjiga {
     public static final String POLJE_BROJ_STRANA="broj_strana";
     public static final String POLJE_DATUM_IZDAVANJA="datum_izdavanja";
 
-    //NE ZABORAVI
-    //U klasi Knjiga ubaciti odgovarajući atribut i anotaciju
-    //atributa kako bi se predstavio više kraj veze izmed̄u Oblast i Knjiga klasa.
+    //Atribut za vezu
+    @ForeignCollectionField(foreignFieldName = "knjiga")
+    private ForeignCollection<Oblast> oblast;
 
     //Konstruktori
     public Knjiga(){}
@@ -62,15 +65,3 @@ public class Knjiga {
     }
 
 }
-
-/*    //atributi za upisu u bazu
-    @DatabaseField(generatedId = true)//primarni kljuc koji se automatski generise
-    private int id;
-    @DatabaseField(columnName = POLJE_OZNAKA,canBeNull = false)
-    private String oznaka;
-    @DatabaseField(columnName = POLJE_RASPON_KRILA,canBeNull = false)
-    private int rasponKrila;
-
-    //Atribut za vise kraj veze izmendju klasa Roba i Avion
-    @ForeignCollectionField(foreignFieldName = "avion")
-    private ForeignCollection<Roba> roba;*/
