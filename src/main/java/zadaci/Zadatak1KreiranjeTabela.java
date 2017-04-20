@@ -1,5 +1,6 @@
 package zadaci;
 
+import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
@@ -13,6 +14,7 @@ import java.sql.SQLException;
  * Created by androiddevelopment on 20.4.17..
  */
 public class Zadatak1KreiranjeTabela {
+
     public static void main(String[] args) {
         ConnectionSource connectionSource = null;
         try {

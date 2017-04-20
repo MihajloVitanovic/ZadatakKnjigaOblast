@@ -41,6 +41,10 @@ public class Oblast {
     public int getPocetnaStrana(){return pocetnaStrana;}
     public void setPocetnaStrana(int pocetnaStrana){this.pocetnaStrana = pocetnaStrana;}
 
+    public Knjiga getKnjiga(){return knjiga;}
+    public void setKnjiga(Knjiga knjiga){this.knjiga = knjiga;}
+
+
     //Redefinisana metoda toString
     @Override
     public String toString() {

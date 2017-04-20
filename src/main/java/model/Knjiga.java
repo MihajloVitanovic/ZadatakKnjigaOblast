@@ -53,6 +53,9 @@ public class Knjiga {
     public java.util.Date getDatumIzdanja(){return datumIzdanja;}
     public void setDatumIzdanja(java.util.Date datumIzdanja){this.datumIzdanja = datumIzdanja;}
 
+    public ForeignCollection<Oblast> getOblast(){return oblast;}
+    public void setOblast(ForeignCollection<Oblast> oblast){this.oblast = oblast;}
+
     //Redefinisana metoda toString
     @Override
     public String toString() {
