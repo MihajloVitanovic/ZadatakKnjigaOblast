@@ -33,6 +33,10 @@ public class Zadatak3IzmenaVrednosti {
             Oblast oblastZaIzmenu=pronadjenaOblast.get(0);
             oblastZaIzmenu.setPocetnaStrana(35);
             oblastDao.update(oblastZaIzmenu);
+
+            oblast=oblastDao.queryForAll();
+            for (Oblast o:oblast)
+                System.out.println("Oblast = " + o);
            /*
             //Pronalazenje robe koja za vrednost kolone opis ima
             // vrednost "Plasticna stolica"
