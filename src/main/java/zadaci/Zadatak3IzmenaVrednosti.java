@@ -37,23 +37,6 @@ public class Zadatak3IzmenaVrednosti {
             oblast=oblastDao.queryForAll();
             for (Oblast o:oblast)
                 System.out.println("Oblast = " + o);
-           /*
-            //Pronalazenje robe koja za vrednost kolone opis ima
-            // vrednost "Plasticna stolica"
-            List<Roba> pronadjenaRoba=robaDao.queryForEq(Roba.POLJE_OPIS,"Plasticna stolica");
-
-            Roba robaZaIzmenu=pronadjenaRoba.get(0);//Preuzimamo prvi pronadjeni
-            //Menjamo vrednost atributa opis na Drvena stolica
-            robaZaIzmenu.setOpis("Drvena stolica");
-            //Cuvamo izmene u bazi, menja se vrednost kolone opis
-            robaDao.update(robaZaIzmenu);
-
-            /*Prikaz vrednosti tabele Roba
-               da potvrdimo da je vrednost izmenjena
-
-            roba=robaDao.queryForAll();
-            for(Roba r:roba)
-                System.out.println("Roba = " + r);*/
 
 
         } catch (SQLException e) {
